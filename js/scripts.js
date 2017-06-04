@@ -5,9 +5,8 @@ $(document).ready(function() {
     $('#search').click(searchCountries);
 
     function searchCountries() { 
-        var countryName = $('#country-name').val(); 
 		var countryName = $('#country-name').val() || 'Poland'; 
-    $.ajax({ 
+        $.ajax({ 
         url: url + countryName, 
         method: 'GET', 
         success: showCountriesList 
